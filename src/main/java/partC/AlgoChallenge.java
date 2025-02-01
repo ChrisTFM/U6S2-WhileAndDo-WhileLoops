@@ -15,11 +15,6 @@ public class AlgoChallenge {
     checkPosOrNeg(-4, -5, true) --> true
      */
 
-    public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
-
-        return null;
-    }
-
 
     /* Problem 2
     With the provided string, you need to exchange the first and last characters to create a new string.
@@ -32,9 +27,31 @@ public class AlgoChallenge {
     exchange("ab") --> "ba"
      */
 
-    public static String exchange(String str) {
+    public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
+        if (negative == false) {
+            if (a < 0 && b > 0) {return true;}
+            else if (b < 0 && a > 0) {return true;}
+        }
+        else {if (a < 0 && b < 0) {return true;} }
 
-        return null;
+        return false;
     }
 
+    public static String exchange(String str) {
+        String response = "";
+        //Get last letter
+        response += str.charAt(str.length() - 1);
+        for (var i = 1; i < str.length() - 1; i++) {
+            //Get everything in between
+            response += str.charAt(i);
+        }
+        //Get the first letter
+        response += str.charAt(0);
+        return response;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(checkPosOrNeg(-4, 5, true));
+        System.out.println(exchange("Uncle Bob love Super SOU"));
+    }
 }

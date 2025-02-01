@@ -9,12 +9,11 @@ public class DoWhileDemoExample {
             if(i%2==1)
                 response += (" "+i);
             i++;
-        }while(i<21);
+        }
+        while(i<21);
 
         return response;
     }
-
-
 
     public static void main(String[] args) {
         String outputDoWhile = doWhile();

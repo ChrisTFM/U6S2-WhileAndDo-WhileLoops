@@ -6,10 +6,11 @@ public class SumOfNums {
     public static String sum(){
         int UserInput = 0;
         Scanner scan = new Scanner(System.in);
-        while (UserInput <= 0){
+        do{
             System.out.println("Input A Number less than 0");
             UserInput = scan.nextInt();
         }
+        while (UserInput <= 0);
         String response = "Square Root: " + String.valueOf(Math.sqrt(UserInput))  ;
 
         return response;
